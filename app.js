@@ -16,6 +16,8 @@ app.get('/', (req, res) => {
 });
 
 // TODO: Add routers here
+const userRoutes = require('./routes/user');
+app.use('/api/users', userRoutes);
 
 // Error handling middleware
 app.use((err, req, res, next) => {
